@@ -4,7 +4,7 @@
   const el = (tag, className, content) => { const node = document.createElement(tag); if (className) node.className = className; if (content !== undefined) node.textContent = content; return node; };
   const storageKey = 'fund-ranking.products.v1';
   const state = { defaults: [], products: [], snapshot: null, source: 'galaxy', busy: true, ready: false, draft: [], template: null };
-  const worker = new Worker('rank-worker.js');
+  const worker = new Worker('rank-worker.js?v=20261014-notes1');
   const pending = new Map(); let requestId = 0, toastTimer;
   worker.onmessage = event => {
     const message = event.data || {}, waiter = pending.get(message.id);

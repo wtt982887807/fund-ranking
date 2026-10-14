@@ -1,6 +1,6 @@
 /* Keep large source tables and ranking work off the main browser UI thread. */
 'use strict';
-importScripts('xlsx.full.min.js','rank-engine.js');
+importScripts('xlsx.full.min.js','rank-engine.js?v=20261014-notes1');
 let products=[];
 let reports=new Map();
 function matchingIssues(snapshot){

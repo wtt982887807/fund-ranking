@@ -123,10 +123,19 @@
   }
 
   function noteText(result) {
-    if (!result || !result.note || rankText(result) === "未上传") return "";
-    // Notes only contain readable provenance. Do not carry local machine paths
-    // into the workbook when an upstream note includes an absolute filename.
-    return cleanText(result.note).replace(/[A-Za-z]:[\\/][^\r\n；;]+/g, path => path.trim().split(/[\\/]/).pop()).trim();
+    if (!result || !/^前\d+%\s*\(\d+\/\d+\)$/.test(rankText(result))) return "";
+    const filters = {
+      csi_500: '“中证500”', csi_1000: '“中证1000”',
+      csi_300: '“沪深300”', csi_a500: '“中证A500”',
+      kechuang_composite: '“科创”及“综”',
+      zhongzhai_1_3: '“中债”“1-3”“政”',
+      zhongzhai_0_3: '“中债0-3”及“政”'
+    };
+    const notes = [];
+    const filter = filters[result.special_group];
+    if (filter) notes.push("筛选" + filter + "，手排");
+    if (Number(result.tie_count) > 1 || Array.isArray(result.ties) && result.ties.length) notes.push("并列排名");
+    return notes.join("；");
   }
 
   function rowValues(config, product, calculated, categoryLabels) {

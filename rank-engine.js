@@ -236,8 +236,23 @@
     const kind=report.kind,value=recordValue(record,kind);if(value===null||value===undefined)return blankRank('no_growth');
     const category=kind==='galaxy'?record.category_code:key(record.category);const specialCategory=kind==='galaxy'?category:({'增强股票指数型':'1.5.1','复制债券指数型':'3.7.1'}[category]);
     const group=specialGroup(specialCategory,record.fund_name);
-    if(!group){const official=officialRank(record.official_rank);if(official)return {...rankingResult(official.position,official.total,'official','使用源表已披露的同类型排名。'),value:decimalText(value),source_name:record.fund_name,source_row:record.source_row,source_sheet:record.source_sheet};}
-    const peers=report.records.filter(peer=>peer.period===record.period&&(kind==='galaxy'?peer.category_code===category:key(peer.category)===category&&peer.source_sheet===record.source_sheet&&peer.metric===record.metric)&&(!group||specialMatches(group,peer.fund_name))&&recordValue(peer,kind)!==null&&recordValue(peer,kind)!==undefined);
+    const pool=report.records.filter(peer=>peer.period===record.period&&(kind==='galaxy'?peer.category_code===category:key(peer.category)===category&&peer.source_sheet===record.source_sheet&&peer.metric===record.metric)&&(!group||specialMatches(group,peer.fund_name)));
+    if(!group){
+      const official=officialRank(record.official_rank);
+      if(official){
+        const otherTies=pool.filter(peer=>{
+          if(peer.fund_code===record.fund_code)return false;
+          let peerRank;
+          // A malformed peer rank must not change the target's disclosed result.
+          try{peerRank=officialRank(peer.official_rank);}catch{return false;}
+          if(peerRank)return peerRank.position===official.position&&peerRank.total===official.total;
+          const peerValue=recordValue(peer,kind);
+          return peerValue!==null&&peerValue!==undefined&&compareDecimal(peerValue,value)===0;
+        });
+        return {...rankingResult(official.position,official.total,'official','使用源表已披露的同类型排名。'),value:decimalText(value),source_name:record.fund_name,source_row:record.source_row,source_sheet:record.source_sheet,tie_count:otherTies.length+1,ties:otherTies.slice(0,50).map(peer=>({name:peer.fund_name,code:peer.fund_code}))};
+      }
+    }
+    const peers=pool.filter(peer=>recordValue(peer,kind)!==null&&recordValue(peer,kind)!==undefined);
     if(!peers.some(peer=>peer.fund_code===record.fund_code))throw new Error(`目标产品${record.fund_code}未进入有效数值比较组`);
     const higher=peers.filter(peer=>compareDecimal(recordValue(peer,kind),value)>0).length;const position=higher+1;
     const tied=peers.filter(peer=>compareDecimal(recordValue(peer,kind),value)===0);const otherTies=tied.filter(peer=>peer.fund_code!==record.fund_code);
