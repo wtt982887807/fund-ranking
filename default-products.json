@@ -1,0 +1,308 @@
+[
+  {
+    "name": "国泰海通中证500指增A",
+    "code": "014155",
+    "galaxy_category": "1.5.1",
+    "gtht_category": "股票型-指数股票型-增强股票指数型"
+  },
+  {
+    "name": "国泰海通中证1000指增A",
+    "code": "015867",
+    "galaxy_category": "1.5.1",
+    "gtht_category": "股票型-指数股票型-增强股票指数型"
+  },
+  {
+    "name": "国泰海通量化选股A",
+    "code": "016466",
+    "galaxy_category": "2.1.1",
+    "gtht_category": "混合型-主动混合开放型-强股混合型"
+  },
+  {
+    "name": "国泰海通沪深300指增A",
+    "code": "018257",
+    "galaxy_category": "1.5.1",
+    "gtht_category": "股票型-指数股票型-增强股票指数型"
+  },
+  {
+    "name": "国泰海通中证1000优选A",
+    "code": "019505",
+    "galaxy_category": "1.1.1",
+    "gtht_category": "股票型-主动股票开放型-主动股票开放型"
+  },
+  {
+    "name": "国泰海通科创板量化选股A",
+    "code": "020698",
+    "galaxy_category": "1.1.1",
+    "gtht_category": "股票型-主动股票开放型-主动股票开放型"
+  },
+  {
+    "name": "国泰海通红利量化选股A",
+    "code": "021919",
+    "galaxy_category": "2.1.1",
+    "gtht_category": "混合型-主动混合开放型-强股混合型"
+  },
+  {
+    "name": "国泰海通中证A500指增A",
+    "code": "022467",
+    "galaxy_category": "1.5.1",
+    "gtht_category": "股票型-指数股票型-增强股票指数型"
+  },
+  {
+    "name": "国泰海通上证科创板综合价格指增A",
+    "code": "023889",
+    "galaxy_category": "1.5.1",
+    "gtht_category": "股票型-指数股票型-增强股票指数型"
+  },
+  {
+    "name": "国泰海通远见价值A",
+    "code": "017935",
+    "galaxy_category": "2.1.1",
+    "gtht_category": "混合型-主动混合开放型-强股混合型"
+  },
+  {
+    "name": "国泰海通创新成长A",
+    "code": "018325",
+    "galaxy_category": "2.1.1",
+    "gtht_category": "混合型-主动混合开放型-强股混合型"
+  },
+  {
+    "name": "国泰海通创新成长C",
+    "code": "018326",
+    "galaxy_category": "2.1.2",
+    "gtht_category": "混合型-主动混合开放型-强股混合型"
+  },
+  {
+    "name": "国泰海通领航成长A",
+    "code": "015368",
+    "galaxy_category": "2.1.1",
+    "gtht_category": "混合型-主动混合开放型-强股混合型"
+  },
+  {
+    "name": "国泰海通领航成长C",
+    "code": "015369",
+    "galaxy_category": "2.1.2",
+    "gtht_category": "混合型-主动混合开放型-强股混合型"
+  },
+  {
+    "name": "国泰海通君得鑫2年期混合A",
+    "code": "952009",
+    "galaxy_category": "2.1.3",
+    "gtht_category": "混合型-主动混合开放型-偏股混合型"
+  },
+  {
+    "name": "国泰海通君得明A",
+    "code": "952004",
+    "galaxy_category": "2.1.3",
+    "gtht_category": "混合型-主动混合开放型-偏股混合型"
+  },
+  {
+    "name": "国泰海通创新医药A",
+    "code": "014157",
+    "galaxy_category": "2.2.1",
+    "gtht_category": "混合型-主动混合开放型-强股混合型"
+  },
+  {
+    "name": "国泰海通稳债增利A",
+    "code": "020175",
+    "galaxy_category": "3.2.3",
+    "gtht_category": "债券型-主动债券开放型-偏债债券型"
+  },
+  {
+    "name": "国泰海通君得盛A",
+    "code": "952024",
+    "galaxy_category": "3.2.3",
+    "gtht_category": "债券型-主动债券开放型-偏债债券型"
+  },
+  {
+    "name": "国泰海通君得盈A",
+    "code": "952020",
+    "galaxy_category": "3.2.3",
+    "gtht_category": "债券型-主动债券开放型-偏债债券型"
+  },
+  {
+    "name": "中证同业存单AAA指数7天持有",
+    "code": "018360",
+    "galaxy_category": "2.7.1",
+    "gtht_category": "国内其他-同业存单-同业存单"
+  },
+  {
+    "name": "中债1-3年政金债",
+    "code": "952003",
+    "galaxy_category": "3.7.1",
+    "gtht_category": "债券型-指数债券型-复制债券指数型"
+  },
+  {
+    "name": "中债0-3年政金债",
+    "code": "020228",
+    "galaxy_category": "3.7.1",
+    "gtht_category": "债券型-指数债券型-复制债券指数型"
+  },
+  {
+    "name": "君得利短债",
+    "code": "952001",
+    "galaxy_category": "3.1.5",
+    "gtht_category": "债券型-主动债券开放型-短债债券型"
+  },
+  {
+    "name": "君添利中短债发起式",
+    "code": "015809",
+    "galaxy_category": "3.1.3",
+    "gtht_category": "债券型-主动债券开放型-短债债券型"
+  },
+  {
+    "name": "安裕中短债",
+    "code": "025594",
+    "galaxy_category": "3.1.3",
+    "gtht_category": "债券型-主动债券开放型-短债债券型"
+  },
+  {
+    "name": "30天滚动持有中短债",
+    "code": "013281",
+    "galaxy_category": "3.1.3",
+    "gtht_category": "债券型-主动债券开放型-短债债券型"
+  },
+  {
+    "name": "君享利30天滚动债券型发起式",
+    "code": "018509",
+    "galaxy_category": "3.1.1",
+    "gtht_category": "债券型-主动债券开放型-纯债债券型"
+  },
+  {
+    "name": "60天滚动持有中短债",
+    "code": "015248",
+    "galaxy_category": "3.1.3",
+    "gtht_category": "债券型-主动债券开放型-短债债券型"
+  },
+  {
+    "name": "君增利60天滚动持有债券发起式",
+    "code": "018624",
+    "galaxy_category": "3.1.1",
+    "gtht_category": "债券型-主动债券开放型-纯债债券型"
+  },
+  {
+    "name": "90天滚动持有中短债发起式",
+    "code": "017058",
+    "galaxy_category": "3.1.3",
+    "gtht_category": "债券型-主动债券开放型-短债债券型"
+  },
+  {
+    "name": "稳健悦享90天持有期债券型发起式",
+    "code": "023662",
+    "galaxy_category": "3.1.1",
+    "gtht_category": "债券型-主动债券开放型-纯债债券型"
+  },
+  {
+    "name": "安润90天持有期中短债",
+    "code": "025590",
+    "galaxy_category": "3.1.3",
+    "gtht_category": "债券型-主动债券开放型-短债债券型"
+  },
+  {
+    "name": "120天持有期债券型发起式",
+    "code": "021260",
+    "galaxy_category": "3.1.1",
+    "gtht_category": "债券型-主动债券开放型-纯债债券型"
+  },
+  {
+    "name": "180天持有期债券型发起式",
+    "code": "021108",
+    "galaxy_category": "3.1.1",
+    "gtht_category": "债券型-主动债券开放型-纯债债券型"
+  },
+  {
+    "name": "1年定开债券发起式",
+    "code": "013272",
+    "galaxy_category": "3.1.11",
+    "gtht_category": "债券型-主动债券开放型-纯债债券型"
+  },
+  {
+    "name": "安弘六个月定开债券",
+    "code": "016722",
+    "galaxy_category": "3.1.11",
+    "gtht_category": "债券型-主动债券开放型-纯债债券型"
+  },
+  {
+    "name": "安平一年定开债券发起式",
+    "code": "017693",
+    "galaxy_category": "3.1.11",
+    "gtht_category": "债券型-主动债券开放型-纯债债券型"
+  },
+  {
+    "name": "安裕纯债一年定开债券",
+    "code": "018426",
+    "galaxy_category": "3.1.11",
+    "gtht_category": "债券型-主动债券开放型-纯债债券型"
+  },
+  {
+    "name": "安睿纯债",
+    "code": "019400",
+    "galaxy_category": "3.1.1",
+    "gtht_category": "债券型-主动债券开放型-纯债债券型"
+  },
+  {
+    "name": "安宜纯债",
+    "code": "021794",
+    "galaxy_category": "3.1.1",
+    "gtht_category": "债券型-主动债券开放型-纯债债券型"
+  },
+  {
+    "name": "安悦债券",
+    "code": "025596",
+    "galaxy_category": "3.1.1",
+    "gtht_category": "债券型-主动债券开放型-纯债债券型"
+  },
+  {
+    "name": "海升六个月持有期债券",
+    "code": "025600",
+    "galaxy_category": "3.2.1",
+    "gtht_category": "债券型-主动债券开放型-准债债券型"
+  },
+  {
+    "name": "安泰三个月持有期债券",
+    "code": "025592",
+    "galaxy_category": "3.2.1",
+    "gtht_category": "债券型-主动债券开放型-准债债券型"
+  },
+  {
+    "name": "稳健添利债券",
+    "code": "022395",
+    "galaxy_category": "3.2.3",
+    "gtht_category": "债券型-主动债券开放型-偏债债券型"
+  },
+  {
+    "name": "鑫悦债券",
+    "code": "025627",
+    "galaxy_category": "3.2.3",
+    "gtht_category": "债券型-主动债券开放型-偏债债券型"
+  },
+  {
+    "name": "鑫逸债券",
+    "code": "025625",
+    "galaxy_category": "3.2.3",
+    "gtht_category": "债券型-主动债券开放型-偏债债券型"
+  },
+  {
+    "name": "鑫选三个月持有期债券",
+    "code": "025623",
+    "galaxy_category": "3.2.3",
+    "gtht_category": "债券型-主动债券开放型-偏债债券型"
+  },
+  {
+    "name": "鑫诚六个月持有期债券",
+    "code": "025621",
+    "galaxy_category": "3.2.3",
+    "gtht_category": "债券型-主动债券开放型-偏债债券型"
+  },
+  {
+    "name": "中证香港科技指数型发起式（QDII）",
+    "code": "022121",
+    "galaxy_category": "6.1.1",
+    "gtht_category": "QDII复制股票指数型"
+  },
+  {
+    "name": "中证港股通高股息投资指数型发起式（QDII）",
+    "code": "023073",
+    "galaxy_category": "6.1.1",
+    "gtht_category": "QDII复制股票指数型"
+  }
+]

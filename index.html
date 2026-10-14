@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="银河及国泰海通公募基金排名整理。逐份导入报表，修改产品清单，按原模板导出Excel。文件在浏览器内计算。">
+  <meta name="theme-color" content="#16384b">
+  <title>公募基金排名整理 · 银河与国泰海通</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="jszip.min.js"></script>
+  <script defer src="template-export.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header class="masthead">
+    <div class="brand"><span class="brand-symbol" aria-hidden="true">↗</span><div><h1>公募基金排名整理</h1><p>银河证券 · 国泰海通证券</p></div></div>
+    <span class="privacy"><span class="status-dot"></span> 文件仅在您的浏览器内计算</span>
+  </header>
+  <main>
+    <section class="intro"><div><p class="eyebrow">每月排名工作台</p><h2>导入报表，即刻整理排名</h2><p>上传一份，先算一份。支持银河近一年、两年、三年，以及国泰海通业绩和超额收益报表。</p></div><div class="intro-meta"><span id="product-total">51</span><small>只跟踪产品 · 清单可修改</small></div></section>
+    <section class="upload-section card" aria-labelledby="upload-title">
+      <div class="section-heading"><div><h3 id="upload-title">1. 导入本月报表</h3><p>可单份或多份导入，顺序不限；重复导入同一来源、同一期间会替换原文件。</p></div><button id="clear-reports" class="text-button" disabled>清空本次报表</button></div>
+      <label class="dropzone" id="dropzone" for="report-files" tabindex="0"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 15V3m0 0L7 8m5-5 5 5M4 15v5h16v-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>选择 Excel 文件，或拖放到这里</strong><span>支持 .xlsx / .xls · 无需凑齐五份报表</span><input id="report-files" type="file" accept=".xlsx,.xls" multiple></label>
+      <div id="upload-progress" class="progress" role="status" aria-live="polite" hidden><span class="spinner" aria-hidden="true"></span><span id="progress-text"></span></div>
+      <div class="source-slots" id="source-slots" aria-label="已导入报表状态"></div>
+      <ul id="report-list" class="report-list" aria-label="文件列表"></ul>
+    </section>
+    <section class="results-section card" aria-labelledby="results-title">
+      <div class="section-heading result-heading"><div><h3 id="results-title">2. 查看排名与导出</h3><p id="result-summary">导入报表后，已上传期间会自动显示排名。</p></div><div class="actions"><button id="edit-products" class="button secondary">修改产品清单</button><button id="export-excel" class="button primary" disabled><span aria-hidden="true">↓</span> 导出 Excel</button></div></div>
+      <div id="issues" class="issues" hidden role="status"></div>
+      <div class="table-toolbar"><div class="tabs" role="tablist" aria-label="排名来源"><button id="tab-galaxy" class="tab active" role="tab" aria-selected="true" aria-controls="ranking-panel" data-source="galaxy">银河排名</button><button id="tab-gtht" class="tab" role="tab" aria-selected="false" aria-controls="ranking-panel" data-source="gtht">国泰海通排名</button></div><label class="search"><span aria-hidden="true">⌕</span><input id="product-search" type="search" placeholder="搜索产品名称、代码或分类" aria-label="搜索排名产品"></label></div>
+      <div class="table-wrap" id="ranking-panel" role="tabpanel" aria-labelledby="tab-galaxy" tabindex="0"><table id="ranking-table"><thead></thead><tbody></tbody></table><div class="no-results" id="no-results" hidden>没有找到符合条件的产品</div></div>
+      <div class="table-footer"><p id="shown-count">共 51 只产品</p><div class="legend" aria-label="排名热力图颜色"><span><i class="heat-1"></i>前1–10%</span><span><i class="heat-2"></i>前11–30%</span><span><i class="heat-3"></i>前31–70%</span><span><i class="heat-4"></i>前71–90%</span><span><i class="heat-5"></i>前91–100%</span></div></div>
+      <div class="usage-note"><span>ⓘ</span><p><strong>排名说明：</strong>百分比采用进一法；收益率相同按并列名次处理。点击排名旁的说明按钮可查看手排范围和并列信息，这些说明也会写入 Excel 单元格备注。未上传期间显示“未上传”；已上传但未披露收益或无对应记录显示“--”。</p></div>
+    </section>
+    <footer><span>导出文件沿用原 Excel 模板与动态热力图。5年、3年评级留空。</span><span>报表关闭页面后清除；产品清单保存在当前浏览器。</span></footer>
+  </main>
+  <dialog id="product-dialog" class="product-dialog" aria-labelledby="product-dialog-title">
+    <div class="dialog-heading"><div><h2 id="product-dialog-title">修改产品清单</h2><p>按基金代码精确匹配，并核对管理人为国泰海通资管。增删和改名会同步到两张导出表。</p></div><button class="icon-button close-dialog" aria-label="关闭产品清单">×</button></div>
+    <div class="editor-actions"><button id="add-product" class="button secondary">＋ 添加产品</button><button id="import-products" class="button subtle">导入清单</button><button id="export-products" class="button subtle">导出清单</button><button id="reset-products" class="text-button">恢复默认51只</button><input id="product-json-file" type="file" accept=".json,application/json" hidden></div>
+    <p class="editor-help">银河分类填写三级分类代码（如 1.5.1）；国泰海通分类填写完整分类（如 股票型-指数股票型-增强股票指数型）。通过右侧按钮可调整顺序。</p>
+    <div class="editor-wrap"><table id="product-editor"><thead><tr><th>产品简称</th><th>基金代码</th><th>银河分类代码</th><th>国泰海通基金所属分类</th><th>顺序 / 删除</th></tr></thead><tbody></tbody></table></div>
+    <div id="editor-error" class="editor-error" role="alert" hidden></div>
+    <div class="dialog-footer"><p id="editor-count"></p><div class="actions"><button class="button secondary close-dialog">取消</button><button id="save-products" class="button primary">保存并计算</button></div></div>
+  </dialog>
+  <dialog id="note-dialog" class="note-dialog" aria-labelledby="note-title"><div class="dialog-heading"><h2 id="note-title">排名说明</h2><button class="icon-button close-note" aria-label="关闭排名说明">×</button></div><p id="note-subtitle"></p><div id="note-content"></div><div class="dialog-footer"><span>导出时，此说明会保留在对应单元格备注中。</span><button class="button secondary close-note">关闭</button></div></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  <noscript><p class="issues">请在浏览器中启用 JavaScript 后使用排名工具。</p></noscript>
+</body>
+</html>
