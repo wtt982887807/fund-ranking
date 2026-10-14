@@ -32,7 +32,7 @@
       <div class="table-toolbar"><div class="tabs" role="tablist" aria-label="排名来源"><button id="tab-galaxy" class="tab active" role="tab" aria-selected="true" aria-controls="ranking-panel" data-source="galaxy">银河排名</button><button id="tab-gtht" class="tab" role="tab" aria-selected="false" aria-controls="ranking-panel" data-source="gtht">国泰海通排名</button></div><label class="search"><span aria-hidden="true">⌕</span><input id="product-search" type="search" placeholder="搜索产品名称、代码或分类" aria-label="搜索排名产品"></label></div>
       <div class="table-wrap" id="ranking-panel" role="tabpanel" aria-labelledby="tab-galaxy" tabindex="0"><table id="ranking-table"><thead></thead><tbody></tbody></table><div class="no-results" id="no-results" hidden>没有找到符合条件的产品</div></div>
       <div class="table-footer"><p id="shown-count">共 51 只产品</p><div class="legend" aria-label="排名热力图颜色"><span><i class="heat-1"></i>前1–10%</span><span><i class="heat-2"></i>前11–30%</span><span><i class="heat-3"></i>前31–70%</span><span><i class="heat-4"></i>前71–90%</span><span><i class="heat-5"></i>前91–100%</span></div></div>
-      <div class="usage-note"><span>ⓘ</span><p><strong>排名说明：</strong>百分比采用进一法；收益率相同按并列名次处理。点击排名旁的说明按钮可查看手排范围和并列信息，这些说明也会写入 Excel 单元格备注。未上传期间显示“未上传”；已上传但未披露收益或无对应记录显示“--”。</p></div>
+      <div class="usage-note"><span>ⓘ</span><p><strong>排名说明：</strong>百分比采用进一法；收益率相同按并列名次处理。点击排名旁的说明按钮可查看手排范围和并列信息。导出的 Excel 仅对特殊筛选手排和并列排名添加简短备注。未上传期间显示“未上传”；已上传但未披露收益或无对应记录显示“--”。</p></div>
     </section>
     <footer><span>导出文件沿用原 Excel 模板与动态热力图。5年、3年评级留空。</span><span>报表关闭页面后清除；产品清单保存在当前浏览器。</span></footer>
   </main>
@@ -44,7 +44,7 @@
     <div id="editor-error" class="editor-error" role="alert" hidden></div>
     <div class="dialog-footer"><p id="editor-count"></p><div class="actions"><button class="button secondary close-dialog">取消</button><button id="save-products" class="button primary">保存并计算</button></div></div>
   </dialog>
-  <dialog id="note-dialog" class="note-dialog" aria-labelledby="note-title"><div class="dialog-heading"><h2 id="note-title">排名说明</h2><button class="icon-button close-note" aria-label="关闭排名说明">×</button></div><p id="note-subtitle"></p><div id="note-content"></div><div class="dialog-footer"><span>导出时，此说明会保留在对应单元格备注中。</span><button class="button secondary close-note">关闭</button></div></dialog>
+  <dialog id="note-dialog" class="note-dialog" aria-labelledby="note-title"><div class="dialog-heading"><h2 id="note-title">排名说明</h2><button class="icon-button close-note" aria-label="关闭排名说明">×</button></div><p id="note-subtitle"></p><div id="note-content"></div><div class="dialog-footer"><span>Excel 仅保留特殊筛选手排和并列排名的简短备注。</span><button class="button secondary close-note">关闭</button></div></dialog>
   <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
   <noscript><p class="issues">请在浏览器中启用 JavaScript 后使用排名工具。</p></noscript>
 </body>
